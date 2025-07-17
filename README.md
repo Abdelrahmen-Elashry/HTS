@@ -72,7 +72,7 @@ http://localhost:5000
 *Student at Faculty of Science, Mansoura University*  
 *Statistics and Computer Science Program*
 
-### [**Sofian Kirat**](https://www.linkedin.com/in/sofian-kirat/)  
+### [**Sofyan Kirat**](https://www.linkedin.com/in/sofyankirat/)
 📧 **www.sofyankirat123@gmail.com**  
 *Student at Faculty of Science, Mansoura University*  
 *Statistics and Computer Science Program*
