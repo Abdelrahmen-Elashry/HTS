@@ -64,6 +64,23 @@ python app.py
 ```bash
 http://localhost:5000
 ```
+# HTS Platform Screenshots  
+
+## Screenshot 1: Welcome Page  
+![Welcome Page](HTS/static/images/Screenshot_1.png)  
+The HTS homepage with a welcoming message.  
+
+---  
+
+## Screenshot 2: Services Overview  
+![Services Page](HTS/static/images/Screenshot_2.png)  
+Lists available hypothesis testing methods (Traditional, P-value, Confidence Interval).  
+
+---  
+
+## Screenshot 3: Parameter Selection  
+![Parameter Selection](HTS/static/images/Screenshot_3.png)  
+Interface for selecting statistical parameters (Mean, Variance, Proportion, etc.).  
 
 ## 👨‍💻 Team
 
