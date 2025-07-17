@@ -110,5 +110,5 @@ This project is open-source and free to use for learning purposes.
 
 ## 💬 Feedback
 
-We’d love to hear your feedback or ideas for future improvements.
+We’d love to hear your feedback or ideas for future improvements.  
 Feel free to contact us via email or LinkedIn (Just click our names in Team section)!
