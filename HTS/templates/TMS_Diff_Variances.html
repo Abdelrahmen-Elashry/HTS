@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Traditional Method (Variances) - HTS</title>
+    <meta name="description" content="Hypothesis testing made simple—solve problems, understand stats, and make better decisions!">
+    <link rel="stylesheet" href="../static/css/TMS_Diff_Variances.css">
+    <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
+    <link rel="icon" type="image/png" href="../static/images/favicon.png">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div>
+            <a href="index.html">HTS</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Main Content-->
+    <main>
+        <section>
+            <h1>Traditional Method: Difference between Two Variances</h1>
+            <img src="../static/images/The_Variance.jpg" alt="The_Traditional_Method_Variance" width="450" height="450">
+            <p>Perform hypothesis tests for population variances using the classical approach</p>
+        </section>
+        <section>
+            <form method="post" id="hypothesisForm" onsubmit="submitForm(event)">
+                <div class="form-group">
+                    <label for="hypothesisType">Hypothesis Type:</label>
+                    <select id="hypothesisType" name="hypothesisType" required>
+                        <option value="">-- Select Hypothesis --</option>
+                        <option value="two-tailed">H₀: σ₁² = σ₂² vs H₁: σ₁² ≠ σ₂² (Two-Tailed)</option>
+                        <option value="right-tailed">H₀: σ₁² ≤ σ₂² vs H₁: σ₁² > σ₂² (Right-Tailed)</option>
+                        <option value="left-tailed">H₀: σ₁² ≥ σ₂² vs H₁: σ₁² < σ₂² (Left-Tailed)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="alpha">Significance Level (α):</label>
+                    <select id="alpha" name="alpha" required>
+                        <option value="0.01">0.01 (1%)</option>
+                        <option value="0.05" selected>0.05 (5%)</option>
+                        <option value="0.10">0.10 (10%)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="firstSampleSize">First Sample Size (n₁):</label>
+                    <input type="number" id="firstSampleSize" name="firstSampleSize" min="2" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="secondSampleSize">Second Sample Size (n₂):</label>
+                    <input type="number" id="secondSampleSize" name="secondSampleSize" min="2" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="firstSampleVariance">First Sample Variance (s₁²):</label>
+                    <input type="number" id="firstSampleVariance" name="firstSampleVariance" min="0" step="0.01" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="secondSampleVariance">Second Sample Variance (s₂²):</label>
+                    <input type="number" id="secondSampleVariance" name="secondSampleVariance" min="0" step="0.01" required>
+                </div>
+
+                <div class="form-group button-group">
+                    <button type="reset">Clear Form</button>
+                    <button type="submit">Calculate Results</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="results">
+            <h3>Test Results</h3>
+            <div id="resultContent"></div>
+            <div id="visualization-container" style="display: none;">
+                <h4>Visualization</h4>
+                <img id="distPlot" style="max-width: 100%;">
+            </div>
+            <div id="calculationSteps">
+                <h4>Calculation Steps</h4>
+                <ol id="stepsList"></ol>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="index.html"><img src="../static/images/favicon.png" alt="HTS_logo" width="100" height="100"></a>
+                <p>© 2025 HTS, made with ♥ by students at MU</p>
+            </div>
+    
+            <div class="footer-services">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="TMS_Mean.html">Traditional Method (Mean)</a></li>
+                    <li><a href="TMS_Variance.html">Traditional Method (Variance)</a></li>
+                    <li><a href="TMS_Proportion.html">Traditional Method (Proportion)</a></li>
+                    <li><a href="PVS_Mean.html">P-Value Method (Mean)</a></li>
+                    <li><a href="PVS_Variance.html">P-Value Method (Variance)</a></li>
+                    <li><a href="PVS_Proportion.html">P-Value Method (Proportion)</a></li>
+                    <li><a href="CIS_Mean.html">Confidence Interval (Mean)</a></li>
+                    <li><a href="CIS_Variance.html">Confidence Interval (Variance)</a></li>
+                    <li><a href="CIS_Proportion.html">Confidence Interval (Proportion)</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="Terms_Of_Use.html">Terms of Use</a></li>
+                    <li><a href="Privacy_Policy.html">Privacy Policy</a></li>
+                    <li><a href="Cookie_Policy.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-social">
+                <h4>Connect With Us</h4>
+                <ul class="social-icons">
+                    <li>
+                        <a href="https://www.facebook.com/" aria-label="Facebook">
+                            <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="25" height="25">
+                                <title>Facebook icon</title>
+                                <path d="M23.998 12c0-6.628-5.372-12-11.999-12C5.372 0 0 5.372 0 12c0 5.988 4.388 10.952 10.124 11.852v-8.384H7.078v-3.469h3.046V9.356c0-3.008 1.792-4.669 4.532-4.669 1.313 0 2.686.234 2.686.234v2.953H15.83c-1.49 0-1.955.925-1.955 1.874V12h3.328l-.532 3.469h-2.796v8.384c5.736-.9 10.124-5.864 10.124-11.853z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/" aria-label="Twitter">
+                            <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="25" height="25">
+                                <title>Twitter icon</title>
+                                <path d="M23.954 4.569a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.061a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.937 4.937 0 0 0 4.604 3.417 9.868 9.868 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 0 0 2.46-2.548l-.047-.02z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" aria-label="Instagram">
+                            <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="25" height="25">
+                                <title>Instagram icon</title>
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913a5.885 5.885 0 0 0 1.384 2.126A5.868 5.868 0 0 0 4.14 23.37c.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558a5.898 5.898 0 0 0 2.126-1.384 5.86 5.86 0 0 0 1.384-2.126c.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913a5.89 5.89 0 0 0-1.384-2.126A5.847 5.847 0 0 0 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227a3.81 3.81 0 0 1-.899 1.382 3.744 3.744 0 0 1-1.38.896c-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421a3.716 3.716 0 0 1-1.379-.899 3.644 3.644 0 0 1-.9-1.38c-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 1 0 0-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 0 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </footer>
+    <script src="../static/js/TMS_Diff_Variances.js"></script>
+</body>
+</html>
+
+
