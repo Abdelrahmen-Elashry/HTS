@@ -55,40 +55,39 @@
 
 ```bash
 pip install flask matplotlib
-Run the app using the following command:
-
-bash
-Copy
-Edit
+Run the app using the following command in the terminal:
 python app.py
 Open your browser and go to:
-
-arduino
-Copy
-Edit
 http://localhost:5000
-📸 Screenshots
-Homepage	Method Selection	Parameter Selection
+```
 
-(Replace the paths above with your actual image file names if you're adding screenshots to the repo)
+## 👨‍💻 Team
 
-👨‍💻 Team
-Abdelrahmen Elashry
-📧 abdelrahmenelashry7@gmail.com
-Student at Faculty of Science, Mansoura University
-Statistics and Computer Science Program
+### [**Abdelrahmen Elashry**](https://www.linkedin.com/in/abdelrahmen-elashry/)  
+📧 **abdelrahmenelashry@gmail.com**  
+*Student at Faculty of Science, Mansoura University*  
+*Statistics and Computer Science Program*
 
-Sofian Kirat
-📧 sofian.kirat@gmail.com
-Student at Faculty of Science, Mansoura University
-Statistics and Computer Science Program
+### [**Sofian Kirat**](https://www.linkedin.com/in/sofian-kirat/)  
+📧 **www.sofyankirat123@gmail.com**  
+*Student at Faculty of Science, Mansoura University*  
+*Statistics and Computer Science Program*
 
-🧠 Why We Built This
-As students passionate about statistics and data science, we built HTS to simplify the hypothesis testing process for learners, analysts, and educators. This platform not only performs the tests but also teaches the logic behind them with clarity, precision, and visual feedback.
+---
 
-📌 License
+## 🧠 Why We Built This
+
+As students passionate about statistics and data science, we built **HTS** to simplify the hypothesis testing process for learners, analysts, and educators. This platform not only performs the tests but also teaches the logic behind them with clarity, precision, and visual feedback.
+
+---
+
+## 📌 License
+
 This project is open-source and free to use for learning purposes.
 
-💬 Feedback
-We’d love to hear your feedback or ideas for future improvements.
-Feel free to contact us via email or LinkedIn!
+---
+
+## 💬 Feedback
+
+We’d love to hear your feedback or ideas for future improvements.  
+Feel free to contact us via **email** or **LinkedIn**!
