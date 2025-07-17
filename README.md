@@ -32,7 +32,7 @@
 - 📈 Visualizations using `matplotlib` for hypothesis test results
 
 - 🧮 Each result page clearly displays:
-  - Test statistics
+  - Relevant test statistics (e.g., test value, p-value) based on the selected method
   - Critical values
   - Decision results
   - All steps used in the test
@@ -55,9 +55,13 @@
 
 ```bash
 pip install flask matplotlib
-Run the app using the following command in the terminal:
+```
+4. Run the app using the following command in the terminal:
+```bash
 python app.py
-Open your browser and go to:
+```
+5. Open your browser and go to:
+```bash
 http://localhost:5000
 ```
 
