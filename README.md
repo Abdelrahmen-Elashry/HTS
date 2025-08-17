@@ -64,6 +64,16 @@ python app.py
 ```bash
 http://localhost:5000
 ```
+
+## 📚 Learning Resources  
+
+To help you not only use **HTS** but also truly understand hypothesis testing, we’ve included some learning resources:  
+
+- 📝 **Built-in Explanations**: Each method (Traditional, P-value, Confidence Interval) is explained step-by-step with examples inside the platform.  
+- 🎓 **Recommended References**:  
+  - *Introduction to Probability and Statistics* by William Mendenhall  
+  - *Statistics for Engineers and Scientists* by William Navidi  
+
 # HTS Platform Screenshots  
 
 ## Screenshot 1: Welcome Page  
