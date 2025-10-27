@@ -84,7 +84,7 @@ The HTS homepage with a welcoming message.
 
 ## Screenshot 2: Services Overview  
 ![Services Page](HTS/static/images/Screenshot_2.png)  
-Lists available hypothesis testing methods (Traditional, P-value, Confidence Interval).  
+List of available hypothesis testing methods (Traditional, P-value, Confidence Interval).  
 
 ---  
 
